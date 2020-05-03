@@ -65,13 +65,15 @@ var Images = (_temp = _class = function (_Component) {
         null,
         React.createElement(
           Col,
-          {
-            xs: 12,
-            md: 12,
-            className: 'height-one background',
-            onClick: this.openModal.bind(this, 0),
-            style: { background: 'url(' + images[0].source + ')' } },
-          overlay
+          { xs: 12, md: 12, className: 'height-one' },
+          React.createElement(
+            'div',
+            {
+              className: 'image background',
+              onClick: this.openModal.bind(this, 0),
+              style: { background: 'url(' + images[0].source + ')' } },
+            overlay
+          )
         )
       )
     );
@@ -92,27 +94,31 @@ var Images = (_temp = _class = function (_Component) {
         null,
         React.createElement(
           Col,
-          {
-            xs: 6,
-            md: 6,
-            className: 'image height-two background',
-            onClick: this.openModal.bind(this, conditionalRender ? 1 : 0),
-            style: {
-              background: 'url(' + (conditionalRender ? images[1].source : images[0].source) + ')'
-            } },
-          this.renderOverlay()
+          { xs: 6, md: 6, className: 'height-two' },
+          React.createElement(
+            'div',
+            {
+              className: 'image background',
+              onClick: this.openModal.bind(this, conditionalRender ? 1 : 0),
+              style: {
+                background: 'url(' + (conditionalRender ? images[1].source : images[0].source) + ')'
+              } },
+            this.renderOverlay()
+          )
         ),
         React.createElement(
           Col,
-          {
-            xs: 6,
-            md: 6,
-            className: 'image height-two background',
-            onClick: this.openModal.bind(this, conditionalRender ? 2 : 1),
-            style: {
-              background: 'url(' + (conditionalRender ? images[2].source : images[1].source) + ')'
-            } },
-          overlay
+          { xs: 6, md: 6, className: 'height-two' },
+          React.createElement(
+            'div',
+            {
+              className: 'image background',
+              onClick: this.openModal.bind(this, conditionalRender ? 2 : 1),
+              style: {
+                background: 'url(' + (conditionalRender ? images[2].source : images[1].source) + ')'
+              } },
+            overlay
+          )
         )
       )
     );
@@ -133,39 +139,45 @@ var Images = (_temp = _class = function (_Component) {
         null,
         React.createElement(
           Col,
-          {
-            xs: 6,
-            md: 4,
-            className: 'image height-three background',
-            onClick: this.openModal.bind(this, conditionalRender ? 1 : 2),
-            style: {
-              background: 'url(' + (conditionalRender ? images[1].source : images[2].source) + ')'
-            } },
-          this.renderOverlay(conditionalRender ? 1 : 2)
+          { xs: 6, md: 4, className: 'height-three' },
+          React.createElement(
+            'div',
+            {
+              className: 'image background',
+              onClick: this.openModal.bind(this, conditionalRender ? 1 : 2),
+              style: {
+                background: 'url(' + (conditionalRender ? images[1].source : images[2].source) + ')'
+              } },
+            this.renderOverlay(conditionalRender ? 1 : 2)
+          )
         ),
         React.createElement(
           Col,
-          {
-            xs: 6,
-            md: 4,
-            className: 'image height-three background',
-            onClick: this.openModal.bind(this, conditionalRender ? 2 : 3),
-            style: {
-              background: 'url(' + (conditionalRender ? images[2].source : images[3].source) + ')'
-            } },
-          this.renderOverlay(conditionalRender ? 2 : 3)
+          { xs: 6, md: 4, className: 'height-three' },
+          React.createElement(
+            'div',
+            {
+              className: 'image background',
+              onClick: this.openModal.bind(this, conditionalRender ? 2 : 3),
+              style: {
+                background: 'url(' + (conditionalRender ? images[2].source : images[3].source) + ')'
+              } },
+            this.renderOverlay(conditionalRender ? 2 : 3)
+          )
         ),
         React.createElement(
           Col,
-          {
-            xs: 6,
-            md: 4,
-            className: 'image height-three background',
-            onClick: this.openModal.bind(this, conditionalRender ? 3 : 4),
-            style: {
-              background: 'url(' + (conditionalRender ? images[3].source : images[4].source) + ')'
-            } },
-          overlay
+          { xs: 6, md: 4, className: 'height-three' },
+          React.createElement(
+            'div',
+            {
+              className: 'image background',
+              onClick: this.openModal.bind(this, conditionalRender ? 3 : 4),
+              style: {
+                background: 'url(' + (conditionalRender ? images[3].source : images[4].source) + ')'
+              } },
+            overlay
+          )
         )
       )
     );
@@ -203,7 +215,10 @@ var Images = (_temp = _class = function (_Component) {
 
     return [more && React.createElement('div', { key: 'count', className: 'cover' }), more && React.createElement(
       'div',
-      { key: 'count-sub', className: 'cover-text', style: { fontSize: '200%' } },
+      {
+        key: 'count-sub',
+        className: 'cover-text',
+        style: { fontSize: '2.5rem', fontWeight: 500 } },
       React.createElement(
         'p',
         null,
