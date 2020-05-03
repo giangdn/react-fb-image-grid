@@ -68,7 +68,7 @@ var Images = (_temp = _class = function (_Component) {
           {
             xs: 12,
             md: 12,
-            className: 'border height-one background',
+            className: 'height-one background',
             onClick: this.openModal.bind(this, 0),
             style: { background: 'url(' + images[0].source + ')' } },
           overlay
@@ -95,7 +95,7 @@ var Images = (_temp = _class = function (_Component) {
           {
             xs: 6,
             md: 6,
-            className: 'border height-two background',
+            className: 'image height-two background',
             onClick: this.openModal.bind(this, conditionalRender ? 1 : 0),
             style: {
               background: 'url(' + (conditionalRender ? images[1].source : images[0].source) + ')'
@@ -107,7 +107,7 @@ var Images = (_temp = _class = function (_Component) {
           {
             xs: 6,
             md: 6,
-            className: 'border height-two background',
+            className: 'image height-two background',
             onClick: this.openModal.bind(this, conditionalRender ? 2 : 1),
             style: {
               background: 'url(' + (conditionalRender ? images[2].source : images[1].source) + ')'
@@ -136,7 +136,7 @@ var Images = (_temp = _class = function (_Component) {
           {
             xs: 6,
             md: 4,
-            className: 'border height-three background',
+            className: 'image height-three background',
             onClick: this.openModal.bind(this, conditionalRender ? 1 : 2),
             style: {
               background: 'url(' + (conditionalRender ? images[1].source : images[2].source) + ')'
@@ -148,7 +148,7 @@ var Images = (_temp = _class = function (_Component) {
           {
             xs: 6,
             md: 4,
-            className: 'border height-three background',
+            className: 'image height-three background',
             onClick: this.openModal.bind(this, conditionalRender ? 2 : 3),
             style: {
               background: 'url(' + (conditionalRender ? images[2].source : images[3].source) + ')'
@@ -160,7 +160,7 @@ var Images = (_temp = _class = function (_Component) {
           {
             xs: 6,
             md: 4,
-            className: 'border height-three background',
+            className: 'image height-three background',
             onClick: this.openModal.bind(this, conditionalRender ? 3 : 4),
             style: {
               background: 'url(' + (conditionalRender ? images[3].source : images[4].source) + ')'

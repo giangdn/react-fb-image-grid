@@ -59,7 +59,7 @@ class Images extends Component {
           <Col
             xs={12}
             md={12}
-            className={`border height-one background`}
+            className={`height-one background`}
             onClick={this.openModal.bind(this, 0)}
             style={{background: `url(${images[0].source})`}}>
             {overlay}
@@ -86,7 +86,7 @@ class Images extends Component {
           <Col
             xs={6}
             md={6}
-            className='border height-two background'
+            className='image height-two background'
             onClick={this.openModal.bind(this, conditionalRender ? 1 : 0)}
             style={{
               background: `url(${
@@ -98,7 +98,7 @@ class Images extends Component {
           <Col
             xs={6}
             md={6}
-            className='border height-two background'
+            className='image height-two background'
             onClick={this.openModal.bind(this, conditionalRender ? 2 : 1)}
             style={{
               background: `url(${
@@ -130,7 +130,7 @@ class Images extends Component {
           <Col
             xs={6}
             md={4}
-            className='border height-three background'
+            className='image height-three background'
             onClick={this.openModal.bind(this, conditionalRender ? 1 : 2)}
             style={{
               background: `url(${
@@ -142,7 +142,7 @@ class Images extends Component {
           <Col
             xs={6}
             md={4}
-            className='border height-three background'
+            className='image height-three background'
             onClick={this.openModal.bind(this, conditionalRender ? 2 : 3)}
             style={{
               background: `url(${
@@ -154,7 +154,7 @@ class Images extends Component {
           <Col
             xs={6}
             md={4}
-            className='border height-three background'
+            className='image height-three background'
             onClick={this.openModal.bind(this, conditionalRender ? 3 : 4)}
             style={{
               background: `url(${
