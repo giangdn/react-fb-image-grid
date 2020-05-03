@@ -45,6 +45,7 @@ class ModalComponent extends Component {
         onCloseRequest={onClose}
         onMovePrevRequest={this.onMovePrevRequest}
         onMoveNextRequest={this.onMoveNextRequest}
+        reactModalStyle={{overlay: {zIndex: 999999}}}
       />
     )
   }
