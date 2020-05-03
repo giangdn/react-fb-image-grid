@@ -59,7 +59,7 @@ class Images extends Component {
           <Col
             xs={12}
             md={12}
-            className={`height-one background`}
+            className='image height-one background'
             onClick={this.openModal.bind(this, 0)}
             style={{background: `url(${images[0].source})`}}>
             {overlay}
