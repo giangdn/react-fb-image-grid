@@ -61,7 +61,8 @@ var ModalComponent = function (_Component) {
       prevSrc: images[(currentImageIndex + images.length - 1) % images.length],
       onCloseRequest: onClose,
       onMovePrevRequest: this.onMovePrevRequest,
-      onMoveNextRequest: this.onMoveNextRequest
+      onMoveNextRequest: this.onMoveNextRequest,
+      reactModalStyle: { overlay: { zIndex: 999999 } }
     });
   };
 
