@@ -61,7 +61,7 @@ class Images extends Component {
             md={12}
             className={`border height-one background`}
             onClick={this.openModal.bind(this, 0)}
-            style={{background: `url(${images[0]})`}}>
+            style={{background: `url(${images[0].source})`}}>
             {overlay}
           </Col>
         </Row>
@@ -89,7 +89,9 @@ class Images extends Component {
             className='border height-two background'
             onClick={this.openModal.bind(this, conditionalRender ? 1 : 0)}
             style={{
-              background: `url(${conditionalRender ? images[1] : images[0]})`,
+              background: `url(${
+                conditionalRender ? images[1].source : images[0].source
+              })`,
             }}>
             {this.renderOverlay()}
           </Col>
@@ -99,7 +101,9 @@ class Images extends Component {
             className='border height-two background'
             onClick={this.openModal.bind(this, conditionalRender ? 2 : 1)}
             style={{
-              background: `url(${conditionalRender ? images[2] : images[1]})`,
+              background: `url(${
+                conditionalRender ? images[2].source : images[1].source
+              })`,
             }}>
             {overlay}
           </Col>
@@ -129,7 +133,9 @@ class Images extends Component {
             className='border height-three background'
             onClick={this.openModal.bind(this, conditionalRender ? 1 : 2)}
             style={{
-              background: `url(${conditionalRender ? images[1] : images[2]})`,
+              background: `url(${
+                conditionalRender ? images[1].source : images[2].source
+              })`,
             }}>
             {this.renderOverlay(conditionalRender ? 1 : 2)}
           </Col>
@@ -139,7 +145,9 @@ class Images extends Component {
             className='border height-three background'
             onClick={this.openModal.bind(this, conditionalRender ? 2 : 3)}
             style={{
-              background: `url(${conditionalRender ? images[2] : images[3]})`,
+              background: `url(${
+                conditionalRender ? images[2].source : images[3].source
+              })`,
             }}>
             {this.renderOverlay(conditionalRender ? 2 : 3)}
           </Col>
@@ -149,7 +157,9 @@ class Images extends Component {
             className='border height-three background'
             onClick={this.openModal.bind(this, conditionalRender ? 3 : 4)}
             style={{
-              background: `url(${conditionalRender ? images[3] : images[4]})`,
+              background: `url(${
+                conditionalRender ? images[3].source : images[4].source
+              })`,
             }}>
             {overlay}
           </Col>
