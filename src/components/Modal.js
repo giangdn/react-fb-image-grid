@@ -1,39 +1,38 @@
-import React, {Component} from 'react'
-import Lightbox from 'react-image-lightbox'
-import 'react-image-lightbox/style.css' // This only needs to be imported once in your app
+import React, { Component } from "react";
+import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/src/style.css"; // This only needs to be imported once in your app
 
 class ModalComponent extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       images: props.images || [],
-      currentImageIndex: props.index,
-    }
+      currentImageIndex: props.index
+    };
 
-    this.onMovePrevRequest = this.onMovePrevRequest.bind(this)
-    this.onMoveNextRequest = this.onMoveNextRequest.bind(this)
+    this.onMovePrevRequest = this.onMovePrevRequest.bind(this);
+    this.onMoveNextRequest = this.onMoveNextRequest.bind(this);
   }
 
   onMovePrevRequest() {
-    const {currentImageIndex, images} = this.state
+    const { currentImageIndex, images } = this.state;
 
     this.setState({
-      currentImageIndex:
-        (currentImageIndex + images.length - 1) % images.length,
-    })
+      currentImageIndex: (currentImageIndex + images.length - 1) % images.length
+    });
   }
 
   onMoveNextRequest() {
-    const {currentImageIndex, images} = this.state
+    const { currentImageIndex, images } = this.state;
 
     this.setState({
-      currentImageIndex: (currentImageIndex + 1) % images.length,
-    })
+      currentImageIndex: (currentImageIndex + 1) % images.length
+    });
   }
 
   render() {
-    const {images, currentImageIndex} = this.state
-    const {onClose} = this.props
+    const { images, currentImageIndex } = this.state;
+    const { onClose } = this.props;
 
     return (
       <Lightbox
@@ -52,10 +51,10 @@ class ModalComponent extends Component {
         onCloseRequest={onClose}
         onMovePrevRequest={this.onMovePrevRequest}
         onMoveNextRequest={this.onMoveNextRequest}
-        reactModalStyle={{overlay: {zIndex: 999999}}}
+        reactModalStyle={{ overlay: { zIndex: 999999 } }}
       />
-    )
+    );
   }
 }
 
-export default ModalComponent
+export default ModalComponent;
