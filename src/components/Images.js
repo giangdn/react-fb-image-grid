@@ -7,7 +7,7 @@ class Images extends Component {
   static defaultProps = {
     images: [],
     hideOverlay: false,
-    renderOverlay: () => "Pety",
+    renderOverlay: () => "",
     renderVideoOverlay: () => "Play",
     overlayBackgroundColor: "#222222",
     onClickEach: null,
