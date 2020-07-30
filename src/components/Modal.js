@@ -34,19 +34,18 @@ class ModalComponent extends Component {
   render() {
     const { images, currentImageIndex } = this.state;
     const { onClose } = this.props;
-    console.log(images, "react-fb-image-grid");
     return (
       <Lightbox
-        mainSrc={images[currentImageIndex].src}
+        mainSrc={images[currentImageIndex].url}
         nextSrc={
           images.length > 1
-            ? images[(currentImageIndex + 1) % images.length].src
+            ? images[(currentImageIndex + 1) % images.length].url
             : null
         }
         prevSrc={
           images.length > 1
             ? images[(currentImageIndex + images.length - 1) % images.length]
-                .src
+                .url
             : null
         }
         onCloseRequest={onClose}
