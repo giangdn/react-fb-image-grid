@@ -36,16 +36,16 @@ class ModalComponent extends Component {
 
     return (
       <Lightbox
-        mainSrc={images[currentImageIndex].url}
+        mainSrc={images[currentImageIndex].source}
         nextSrc={
           images.length > 1
-            ? images[(currentImageIndex + 1) % images.length].url
+            ? images[(currentImageIndex + 1) % images.length].source
             : null
         }
         prevSrc={
           images.length > 1
             ? images[(currentImageIndex + images.length - 1) % images.length]
-                .url
+                .source
             : null
         }
         onCloseRequest={onClose}
