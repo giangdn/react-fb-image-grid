@@ -34,7 +34,7 @@ class ModalComponent extends Component {
   render() {
     const { images, currentImageIndex } = this.state;
     const { onClose } = this.props;
-
+    console.log(images, "react-fb-image-grid");
     return (
       <Lightbox
         mainSrc={images[currentImageIndex].src}
