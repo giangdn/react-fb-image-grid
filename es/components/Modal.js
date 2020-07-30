@@ -55,11 +55,10 @@ var ModalComponent = function (_Component) {
         currentImageIndex = _state3.currentImageIndex;
     var onClose = this.props.onClose;
 
-    console.log(images, "react-fb-image-grid");
     return React.createElement(Lightbox, {
-      mainSrc: images[currentImageIndex].src,
-      nextSrc: images.length > 1 ? images[(currentImageIndex + 1) % images.length].src : null,
-      prevSrc: images.length > 1 ? images[(currentImageIndex + images.length - 1) % images.length].src : null,
+      mainSrc: images[currentImageIndex].url,
+      nextSrc: images.length > 1 ? images[(currentImageIndex + 1) % images.length].url : null,
+      prevSrc: images.length > 1 ? images[(currentImageIndex + images.length - 1) % images.length].url : null,
       onCloseRequest: onClose,
       onMovePrevRequest: this.onMovePrevRequest,
       onMoveNextRequest: this.onMoveNextRequest,
