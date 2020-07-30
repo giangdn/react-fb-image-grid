@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/src/style.css"; // This only needs to be imported once in your app
+import "video-react/dist/video-react.css"; // import css
 
 class ModalComponent extends Component {
   constructor(props) {

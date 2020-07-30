@@ -7,6 +7,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 import React, { Component } from "react";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/src/style.css"; // This only needs to be imported once in your app
+import "video-react/dist/video-react.css"; // import css
 
 var ModalComponent = function (_Component) {
   _inherits(ModalComponent, _Component);
@@ -56,9 +57,9 @@ var ModalComponent = function (_Component) {
 
 
     return React.createElement(Lightbox, {
-      mainSrc: images[currentImageIndex].url,
-      nextSrc: images.length > 1 ? images[(currentImageIndex + 1) % images.length].url : null,
-      prevSrc: images.length > 1 ? images[(currentImageIndex + images.length - 1) % images.length].url : null,
+      mainSrc: images[currentImageIndex].source,
+      nextSrc: images.length > 1 ? images[(currentImageIndex + 1) % images.length].source : null,
+      prevSrc: images.length > 1 ? images[(currentImageIndex + images.length - 1) % images.length].source : null,
       onCloseRequest: onClose,
       onMovePrevRequest: this.onMovePrevRequest,
       onMoveNextRequest: this.onMoveNextRequest,
