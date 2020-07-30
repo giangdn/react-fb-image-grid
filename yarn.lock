@@ -6929,7 +6929,7 @@ react-fast-compare@^3.0.1:
 
 "react-image-lightbox@https://github.com/giangdn/react-image-lightbox.git":
   version "5.1.5"
-  resolved "https://github.com/giangdn/react-image-lightbox.git#045517eb580ded2b11612545a55371ece8a5e0a8"
+  resolved "https://github.com/giangdn/react-image-lightbox.git#5c4f5b8891c53cbaf74a3c17ccc5ad3bb52a004c"
   dependencies:
     prop-types "^15.6.2"
     react-modal "^3.11.1"
